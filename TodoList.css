@@ -1,0 +1,113 @@
+.todolist{
+    box-sizing: border-box;
+    border: 4px solid rgb(2, 43, 2);
+    border-radius: 25px;
+    padding: 10px;
+    background-color: rgb(2, 43, 2);
+    color: white;
+    justify-self: center;
+}
+h1{
+    text-indent: 30px;
+    /* text-indent: -30px; */
+}
+header{
+    margin: 0px 30px 50px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+header input{
+    background-color: rgb(2, 43, 2);
+    color: white;
+    text-indent: 25px;
+    font-size: large;
+    font-weight: 300;
+    height: 40px;
+    width: 80%;
+    border-radius: 10px;
+    border-color: white;
+}
+header button{
+    background-color: rgb(2, 43, 2);
+    color: white;
+    border-color: white;
+    float: right;
+    height: 44px;
+    width: 15%;
+    border-radius: 10px;
+}
+.ToDoTasks{
+    border: 1px solid wheat;
+    align-items: center;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    /* height: 40px; */
+    margin: 30px;
+}
+.ToDoTasks p{
+    text-align: center;
+    width:60%
+}
+#section{
+    margin-top: 30px;
+}
+#Edit, #Completed, #Remove{
+    background-color: rgb(2, 43, 2);
+    height: 25px;
+    border: none;
+}
+#Edit{color: forestgreen;}
+#Completed{color: rgb(219, 208, 54);}
+#Remove{color: brown;}
+
+#Edit:hover, #Completed:hover, #Remove:hover{
+    font-weight: bolder;
+    cursor: pointer;
+}
+.innerdiv{
+    display: flex;
+    text-align: center;
+}
+
+@media(max-width:768px){
+    header input{
+        background-color: rgb(2, 43, 2);
+        color: white;
+        text-indent: 25px;
+        font-size: large;
+        font-weight: 300;
+        height: 40px;
+        width: 70%;
+        border-radius: 10px;
+        border-color: white;
+    }
+    header button{
+        background-color: rgb(2, 43, 2);
+        color: white;
+        border-color: white;
+        float: right;
+        height: 44px;
+        width: 30%;
+        border-radius: 10px;
+    }
+    .ToDoTasks{
+        border: 1px solid wheat;
+        align-items: center;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-evenly;
+        /* height: 40px; */
+        margin: 30px;
+        flex-direction: column;
+    }
+    .ToDoTasks p{
+        text-align: center;
+        /* width:100% */
+    }
+    .innerdiv{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
