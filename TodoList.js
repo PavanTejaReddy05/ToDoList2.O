@@ -19,33 +19,23 @@ let Section=document.getElementById("section");
 function Display(data = [], value = null){
     if(data.length){
         data.slice(0,10).forEach(x=>{
-        let a=document.createElement("div");
-        a.classList.add("ToDoTasks");
         let textDecoration = x.completed ? "line-through" : "none";
         let textColor = x.completed ? "red" : "";
-        a.innerHTML=`
-        <p style="text-decoration:${textDecoration}; color:${textColor}">${x.title}</p>
-        <div class="innerdiv">
-            <button id="Edit" onclick="Editfunc(this)">EDIT</button>
-            <button id="Completed" onclick="CompletedFunc(this)">COMPLETED</button>
-            <button id="Remove" onclick="RemoveFunc(this)">REMOVE</button>
-        </div>
-            `
-        Section.append(a);
+        let templateEle=document.querySelector("template");
+        let templateClone=templateEle.content.cloneNode(true);
+        let ptag=templateClone.querySelector("p");
+        ptag.innerText=x.title;
+        ptag.style.textDecoration=textDecoration;
+        ptag.style.color=textColor;
+        Section.append(templateClone);
     });
     }
     if(value){
-    let a=document.createElement("div");
-    a.classList.add("ToDoTasks");
-    a.innerHTML=`
-    <p>${value}</p>
-    <div class=innerdiv>
-        <button id="Edit" onclick="Editfunc(this)">EDIT</button>
-        <button id="Completed" onclick="CompletedFunc(this)">COMPLETED</button>
-        <button id="Remove" onclick="RemoveFunc(this)">REMOVE</button>
-    </div>
-        `
-    Section.append(a);
+    let templateEle=document.querySelector("template");
+    let templateClone=templateEle.content.cloneNode(true);
+    ptag=templateClone.querySelector("p");
+    ptag.innerText=value;
+    Section.append(templateClone);
     }
 }
 
