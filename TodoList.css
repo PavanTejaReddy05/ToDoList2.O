@@ -86,6 +86,17 @@ header button{
 }
 
 @media(max-width:768px){
+    html{
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
     header input{
         background-color: rgb(2, 43, 2);
         color: white;
