@@ -31,11 +31,11 @@ function Display(data = [], value = null){
     });
     }
     if(value){
-    let templateEle=document.querySelector("template");
-    let templateClone=templateEle.content.cloneNode(true);
-    ptag=templateClone.querySelector("p");
-    ptag.innerText=value;
-    Section.append(templateClone);
+        let templateEle=document.querySelector("template");
+        let templateClone=templateEle.content.cloneNode(true);
+        let ptag=templateClone.querySelector("p");
+        ptag.innerText=value;
+        Section.append(templateClone);
     }
 }
 
@@ -89,7 +89,6 @@ function CompletedFunc(data){
 
 function RemoveFunc(data){
     let div=data.parentElement;
-    // console.log(div);
     div.parentElement.remove();
 }
 
